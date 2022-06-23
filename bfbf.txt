@@ -1,0 +1,66 @@
+
+
+-------------------
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    padding: 5px 0;
+    z-index: 30;
+    background: #145035;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo {
+    position: absolute;
+    width: 70px;
+    border-radius: 50px;
+    left: 50px;
+    top: 5px;
+}
+
+header ul {
+    display: flex;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-left: 95%;
+    margin-right: 0;
+    width: 500px;
+}
+
+header ul li {
+    list-style: none;
+    margin-left: 1rem;
+}
+
+header ul li a {
+    text-decoration: none;
+    padding: 6px 15px;
+    color: #fff;
+    transition: 0.3s;
+}
+
+header ul li a:hover,
+header ul li a.active {
+    background: #ffffff;
+    border-radius: 3rem;
+    color: #145035;
+}
+
+.burguer {
+    display: none;
+    cursor: pointer;
+}
+
+.burguer div{
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 6px;
+    transition: all 0.3s ease;
+}

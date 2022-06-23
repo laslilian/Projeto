@@ -2,7 +2,6 @@ const translate = document.querySelectorAll(".translate");
 const big_title = document.querySelector(".big-title");
 const header = document.querySelector("header");
 const shadow = document.querySelector(".shadow");
-const content = document.querySelector(".content");
 const section = document.querySelector("section");
 const opacity = document.querySelectorAll(".opacity");
 const border = document.querySelector(".border");
@@ -31,3 +30,29 @@ window.addEventListener('scroll', () => {
 
     border.style.width = `${scroll / (sectionY.top + section_height) * 30}%`;
 });
+
+// Navbar
+const navSlide = () => {
+    const burguer = document.querySelector('.burguer');
+    const nav = document.querySelector('.nav-list');
+    const navList = document.querySelectorAll('.nav-list li');
+
+    // Toggle nav
+    burguer.addEventListener('click',() => {
+        nav.classList.toggle('nav-active');
+
+        // Animate list
+        navList.forEach((list, index) => {
+            if(list.style.animation){
+                list.style.animation = '';
+            } else {
+                list.style.animation = `navListFade 0.5s ease forwards ${index / 7 + 0.5}s`;
+            }
+        });
+
+        // Burguer animation
+        burguer.classList.toggle('toggle');
+        });
+}
+
+navSlide();

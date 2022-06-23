@@ -25,16 +25,34 @@ body{
     border-radius: 1rem;
 }
 
+/* Título da página */
+
+.big-title{
+    position: absolute;
+    z-index: 17;
+    line-height: 4rem;
+    top: calc(40% - 2rem);
+    width: 100%;
+    text-align: center;
+    font-size: 5rem;
+    font-weight: 600;
+    left: 1rem;
+}
+
+.big-title {
+    color: transparent;
+    -webkit-text-stroke: 2px rgb(255, 255, 255);
+}
+
 /* Imagem principal da página */
 
 .container{
-    max-width: 70rem;
     padding: 0 2rem;
     margin: 0 auto;
 }
 
 header{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
     position: relative;
     overflow: hidden;
@@ -43,28 +61,29 @@ header{
 header:after{
     content: '';
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0);
     z-index: 25;
 }
 
 .sky {  
     position: absolute;
-    width: 1450px;
     bottom: 70px;
     right: 0;
     z-index: 16;
+    height: 100vh;
 }
 
 .mountain3 { 
     position: absolute;
-    width: 1450px;
     bottom: -120px;
     right: 0;
     z-index: 17;
+    height: 100vh;
+    
 }
 
 /* barra de navegação */
@@ -115,23 +134,17 @@ header ul li a.active {
     color: #145035;
 }
 
-/* Título da página */
-
-.big-title{
-    position: absolute;
-    z-index: 17;
-    line-height: 4rem;
-    top: calc(40% - 2rem);
-    width: 100%;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 600;
-    left: 1rem;
+.burguer {
+    display: none;
+    cursor: pointer;
 }
 
-.big-title {
-    color: transparent;
-    -webkit-text-stroke: 2px rgb(255, 255, 255);
+.burguer div{
+    width: 25px;
+    height: 2px;
+    background-color: #ffffff;
+    margin: 6px;
+    transition: all 0.3s ease;
 }
 
 /* conteúdo da página */
@@ -157,7 +170,7 @@ section .container > *{
 
 .content{
     color: #fff;
-    transform: translateY(-50px);
+    transform: translateY(10px);
 }
 
 .title{
@@ -184,7 +197,7 @@ section .container > *{
     width: 100%;
     left: 0;
     z-index: 20;
-    background: linear-gradient(to top, #175737, transparent);;
+    background: linear-gradient(to top, #175737, transparent);
 }
 
 .opacity{
@@ -219,8 +232,8 @@ section .container > *{
 
 .carousel-item img {
     display: block;
-    width: 500px;
-    height: 300px;
+    width: auto;
+    height: 395px;
 }
 
 .carousel-control {
@@ -355,10 +368,141 @@ section .container > *{
     height: 35px;
 }
 
+/* footer */
 
-@media (max-width: 850px){
+.footer {
+    padding: 40px 0;
+    background: #ffffff;
+}
+
+.footer .social {
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+.footer .social a {
+    margin: 0 8px;
+    opacity: 0.75;
+}
+
+.footer .social a:hover {
+    opacity: 0.9;
+}
+
+a img {
+    width: 40px;
+}
+
+.footer ul {
+    margin-top: 0;
+    padding: 0;
+    list-style: none;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.footer ul li a {
+    color: inherit;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.footer ul li {
+    display: inline-block;
+    padding: 0 15px;
+}
+
+.footer ul li a:hover {
+    opacity: 1;
+    color: #145035;
+}
+
+.footer .copyright {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 13px;
+    color: #aaa;
+}
+
+@media (max-width: 1240px) {
+    .nav-list {
+        width: 60%;
+    }
+}
+
+@media (max-width: 1350px){
     section .container{
         grid-template-columns: 1fr;
+    }
+    body {
+        overflow-x: hidden;
+    }
+
+    .nav-list {
+        font-size: 30px;
+        position: absolute;
+        top: 5.5vh;
+        right: 0;
+        height: 100vh;
+        background: #145035;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        justify-content: space-around;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+    .container {
+        padding: 20px 0;
+    }
+    .logo {
+        width: 80px;
+    }
+    .nav-list li {
+        opacity: 0;
+    }
+    .burguer{
+        display: block;
+        padding-left: 340px;
+    }
+    .burguer div {
+        width: 50px;
+        height: 6px;
+        margin: 9px;
+    }
+    .carousel-item img {
+        width: 100%;
+        height: 100%;   
+    }
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-18px,8px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-13px,-3px);
+}
+
+@keyframes navListFade {
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
     }
 }
 
