@@ -206,108 +206,117 @@ section .container > *{
 
 /* carousel*/
 
-.carousel {
-    position: relative;
-    box-shadow: 0px 1px 6px rgba(0, 0, 0, 0.64);
-    margin-top: 26px;
-}
-
-.carousel-inner {
-    position: relative;
+.slider {
+    width: 500px;
+    height: 300px;
+    border-radius: 10px;
     overflow: hidden;
-    width: 100%;
 }
 
-.carousel-open:checked + .carousel-item {
-    position: static;
-    opacity: 100;
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
 }
 
-.carousel-item {
-    position: absolute;
-    opacity: 0;
-    -webkit-transition: opacity 0.6s ease-out;
-    transition: opacity 0.6s ease-out;
-}
-
-.carousel-item img {
-    display: block;
-    width: auto;
-    height: 395px;
-}
-
-.carousel-control {
-    background: #1757375d;
-    border-radius: 50%;
-    color: rgb(255, 255, 255);
-    cursor: pointer;
+.slides input {
     display: none;
-    font-size: 40px;
-    height: 40px;
-    line-height: 35px;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+.slide img {
+    width: 500px;
+    height: 300px;
+}
+
+/* css dor manual slide navigation */
+
+.navigation-manual {
     position: absolute;
-    top: 50%;
-    -webkit-transform: translate(0, -50%);
-    cursor: pointer;
-    -ms-transform: translate(0, -50%);
-    transform: translate(0, -50%);
-    text-align: center;
+    width: 800px;
+    height: 10px;
+    margin: -230px -150px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
     width: 40px;
-    z-index: 10;
-}
-
-.carousel-control.prev {
-    left: 2%;
-}
-
-.carousel-control.next {
-    right: 2%;
-}
-
-.carousel-control:hover {
-    background: #145035;
-    color: #ffffff;
-}
-
-#carousel-1:checked ~ .control-1,
-#carousel-2:checked ~ .control-2,
-#carousel-3:checked ~ .control-3 {
-    display: block;
-}
-
-.carousel-indicators {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    position: absolute;
-    bottom: 2%;
-    left: 0;
-    right: 0;
-    text-align: center;
-    z-index: 10;
-}
-
-.carousel-indicators li {
-    display: inline-block;
-    margin: 0 5px;
-}
-
-.carousel-bullet {
-    color: #fff;
+    border: 1px solid #ffffff;
+    padding: 5px;
     cursor: pointer;
-    display: block;
-    font-size: 35px;
+    transition: 1s;
+    border-radius: 5px;
 }
 
-.carousel-bullet:hover {
-    color: #aaaaaa;
+.manual-btn:not(:last-child) {
+    margin-right: 20px;
 }
 
-#carousel-1:checked ~ .control-1 ~ .carousel-indicators li:nth-child(1) .carousel-bullet,
-#carousel-2:checked ~ .control-2 ~ .carousel-indicators li:nth-child(2) .carousel-bullet,
-#carousel-3:checked ~ .control-3 ~ .carousel-indicators li:nth-child(3) .carousel-bullet {
-    color: #000000;
+.manual-btn:hover{
+    background: #ffffff;
 }
+
+#radio1:checked ~ .first{
+    margin-left: 0;
+}
+
+#radio2:checked ~ .first{
+    margin-left: -20%;
+}
+
+#radio3:checked ~ .first{
+    margin-left: -40%;
+}
+
+#radio4:checked ~ .first{
+    margin-left: -60%;
+}
+
+/* css automatic navigation */
+
+.navigation-auto {
+    position: absolute;
+    width: 800px;
+    height: 10px;
+    margin: 270px -150px;
+    display: flex;
+    justify-content: center;
+}
+
+.navigation-auto div {
+    width: 40px;
+    border: 1px solid #ffffff;
+    padding: 5px;
+    cursor: pointer;
+    transition: 1s;
+    border-radius: 5px;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 20px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background: #ffffff;
+}
+
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background: #ffffff;
+}
+
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background: #ffffff;
+}
+
+#radio4:checked ~ .navigation-auto .auto-btn4 {
+    background: #ffffff;
+}
+
 
 /* footer */
 
@@ -517,5 +526,48 @@ a img {
 
     .title{
         font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1330px) {
+    .form-image {
+        display: none;
+    }
+    .caixa {
+        width: 50%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 1064px) {
+    .caixa {
+        width: 90%;
+        height: auto;
+    }
+    .input-group {
+        flex-direction: column;
+        z-index: 5;
+        padding-right: 5rem;
+        max-height: 10rem;
+        overflow-y: scroll;
+        flex-wrap: nowrap;
+    }
+    .gender-inputs {
+        margin-top: 2rem;
+    }
+    .gender-group {
+        flex-direction: column;
+    }
+    .gender-title h6 {
+        margin: 0;
+    }
+    .gender-input {
+        margin-top: 0.5rem;
+    }
+    textarea {
+        width: 300px;
+        height: 80px;
     }
 }

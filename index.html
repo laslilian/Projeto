@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <link rel="shortcut icon" href="img/logo2.png">
     <title>Rainforest</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
     <header>
@@ -40,41 +40,48 @@
                 </h3>
                 <p class="text">A maior floresta tropical do mundo é complexa e exige diferentes tipos de soluções para o desafio de conciliar produção e conservação. A Rainforest está na região para ajudar nessa tarefa.</p>
             </div>
-            <div class="Carousel">
-                <div class="carousel">
-                    <div class="carousel-inner">
-                        <input class="carousel-open" type="radio" id="carousel-1" name="carousel" aria-hidden="true" hidden="" checked="checked">
-                        <div class="carousel-item">
-                            <img src="/img/amazonia1.jpg">
-                        </div>
-                        <input class="carousel-open" type="radio" id="carousel-2" name="carousel" aria-hidden="true" hidden="">
-                        <div class="carousel-item">
-                            <img src="/img/amazônia2.jpg">
-                        </div>
-                        <input class="carousel-open" type="radio" id="carousel-3" name="carousel" aria-hidden="true" hidden="">
-                        <div class="carousel-item">
-                            <img src="/img/amazônia3.webp">
-                        </div>
-                        <label for="carousel-3" class="carousel-control prev control-1">‹</label>
-                        <label for="carousel-2" class="carousel-control next control-1">›</label>
-                        <label for="carousel-1" class="carousel-control prev control-2">‹</label>
-                        <label for="carousel-3" class="carousel-control next control-2">›</label>
-                        <label for="carousel-2" class="carousel-control prev control-3">‹</label>
-                        <label for="carousel-1" class="carousel-control next control-3">›</label>
-                        <ol class="carousel-indicators">
-                            <li>
-                                <label for="carousel-1" class="carousel-bullet">•</label>
-                            </li>
-                            <li>
-                                <label for="carousel-2" class="carousel-bullet">•</label>
-                            </li>
-                            <li>
-                                <label for="carousel-3" class="carousel-bullet">•</label>
-                            </li>
-                        </ol>
+             <!-- image slide start -->
+             <div class="slider">
+                <div class="slides">
+                    <!-- buttons start -->
+                    <input type="radio" name="radio-btn" id="radio1">
+                    <input type="radio" name="radio-btn" id="radio2">
+                    <input type="radio" name="radio-btn" id="radio3">
+                    <input type="radio" name="radio-btn" id="radio4">
+                    <!-- buttons end -->
+
+                    <!-- slide images start -->
+                    <div class="slide first">
+                        <img src="/img/conheça.png">
                     </div>
+                    <div class="slide">
+                        <img src="/img/florestaa.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="/img/Selva-Amazonica.jpg">
+                    </div>
+                    <div class="slide">
+                        <img src="/img/animais-da-amazonia.jpeg">
+                    </div>
+                        <!-- slide images end -->
+
+                        <!-- automatic navigation start -->
+                        <div class="navigation-auto">
+                            <div class="auto-btn1"></div>
+                            <div class="auto-btn2"></div>
+                            <div class="auto-btn3"></div>
+                            <div class="auto-btn4"></div>
+                        </div>
+                        <!-- automatic navigation end -->
                 </div>
-            </div> 
+                 <!-- manual navigation start -->
+                <div class="navigation-manual">
+                <label for="radio1" class="manual-btn"></label>
+                <label for="radio2" class="manual-btn"></label>
+                <label for="radio3" class="manual-btn"></label>
+                <label for="radio4" class="manual-btn"></label>
+                <!-- manual navigation end -->
+            </div>
         </div>
     </section>
     <section class="footer">
