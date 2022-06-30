@@ -31,15 +31,12 @@ body{
     position: absolute;
     z-index: 17;
     line-height: 4rem;
-    top: calc(40% - 2rem);
+    top: calc(37% - 2rem);
     width: 100%;
     text-align: center;
     font-size: 5rem;
     font-weight: 600;
     left: 1rem;
-}
-
-.big-title {
     color: transparent;
     -webkit-text-stroke: 2px rgb(255, 255, 255);
 }
@@ -72,9 +69,9 @@ header:after{
 .sky {  
     position: absolute;
     bottom: 70px;
-    right: 0;
     z-index: 16;
     height: 100vh;
+    width: 250vh;
 }
 
 .mountain3 { 
@@ -355,7 +352,6 @@ section .container > *{
     background: #175737;
     color: #ffffff;
     font-weight: bold;
-    margin-left: 280px;
 }
 
 .ctn:hover {
@@ -376,7 +372,7 @@ section .container > *{
 }
 
 .footer .social a {
-    margin: 0 8px;
+    margin: 20px;
     opacity: 0.75;
 }
 

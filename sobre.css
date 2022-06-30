@@ -80,6 +80,7 @@ header ul li a.active {
 
 .content {
     margin-top: 100px;
+    
 }
 
 .content h1 {
@@ -104,11 +105,22 @@ header ul li a.active {
 }
 
 /* card */
-
+.about {
+    font-size: 20px;
+}
+.container1 { 
+    padding: 3rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    background: #145035;
+    background-size: cover;
+}
 .container {
     display: flex;
     justify-content: center;
-    height: 100vh;
     align-items: center;
 }
 
@@ -120,7 +132,6 @@ header ul li a.active {
     overflow: hidden;
     margin-left: 40px;
     margin-right: 40px;
-    
 }
 
 .card img{
@@ -131,7 +142,7 @@ header ul li a.active {
 }
 
 .intro{
-    height: 220px;
+    height: 569px;
     width: 350px;
     padding: 5px;
     box-sizing: border-box;
@@ -139,8 +150,8 @@ header ul li a.active {
     bottom: 28px;
     background: rgba(0, 0, 0, 0.454);
     color: white;
-    transition: .29s;
-    margin-bottom: 100px;
+    transition: .3s;
+    margin-bottom: -50px;
 }
 
 .intro h1{
@@ -152,10 +163,11 @@ header ul li a.active {
 
 .intro p{
     text-align: center;
-    font-size: 18px;
+    font-size: 20px;
     margin: 0px;
     visibility: hidden;
     opacity: 0;
+    
 }
 
 span{
@@ -179,7 +191,11 @@ span{
 .card:hover img{
     transform: scale(1.1); 
 }
-
+/*Apoiadores */
+.apoiadores {
+    padding: 40px ;;
+    
+}
 /* footer */
 .footer {
     padding: 40px 0;
@@ -192,7 +208,7 @@ span{
 }
 
 .footer .social a {
-    margin: 0 8px;
+    margin: 20px;
     opacity: 0.75;
 }
 

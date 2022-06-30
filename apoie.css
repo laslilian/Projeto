@@ -76,8 +76,10 @@ header ul li a.active {
 /* cards */
 
 .cards{
-    padding: 50px;
+    padding: 100px; 
     display:inline-block;
+    justify-content: space-between;
+    padding-left: 350px;
 }
 
 .container {
@@ -90,6 +92,7 @@ header ul li a.active {
     float: left;
     width: 30%;
     margin-top: 80px;
+    
 }
 
 .container .card {
@@ -157,7 +160,7 @@ header ul li a.active {
 /* footer */
 
 footer {
-margin: top 25%;;
+    margin: top 25%;;
     padding: 40px 0;
     background: #ffffff;
     position:static;
@@ -169,7 +172,7 @@ footer .social {
 }
 
 footer .social a {
-    margin: 0 8px;
+    margin: 20px;
     opacity: 0.75;
 }
 

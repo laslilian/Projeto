@@ -76,6 +76,9 @@ header ul li a.active {
 }
 
 /* formulário */ 
+.formulario {
+    margin-left: 200px;
+}
 
 .caixa {
   
@@ -91,7 +94,6 @@ header ul li a.active {
 .form-image {
     width: 50%;
     display: flex;
-    justify-content: center;
     align-items: center;
     padding: 1rem;
 }
@@ -102,8 +104,8 @@ img {
 }
 
 .form-image img {
-    width: 107%;
-    height: 105.5%;
+    width: 153%;
+    height: 104.5%;
 }
 
 .form {
@@ -324,7 +326,7 @@ textarea {
 }
 
 .footer .social a {
-    margin: 0 8px;
+    margin:  20px;
     opacity: 0.75;
 }
 
