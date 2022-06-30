@@ -76,13 +76,13 @@ header ul li a.active {
 }
 
 /* formulário */ 
+
 .formulario {
-    margin-left: 200px;
+    margin-left: 10px;
 }
 
 .caixa {
-  
-    width: 80%;
+    width: 90%;
     height: 80vh;
     display: flex;
     margin-top: 90px;
@@ -175,7 +175,7 @@ img {
 
 textarea {
     margin-top: 9.6px;
-    padding-left: 20px;
+    padding-left: 10px;
     width: 500px;
     height: 150px;
     border-radius: 20px;

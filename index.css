@@ -68,10 +68,11 @@ header:after{
 
 .sky {  
     position: absolute;
-    bottom: 70px;
+    bottom: -80px;
+    right: 0;
     z-index: 16;
     height: 100vh;
-    width: 250vh;
+    
 }
 
 .mountain3 { 
@@ -428,6 +429,7 @@ a img {
     section .container{
         grid-template-columns: 1fr;
     }
+
     body {
         overflow-x: hidden;
     }
@@ -447,28 +449,34 @@ a img {
         transform: translateX(100%);
         transition: transform 0.5s ease-in;
     }
+
     .container {
         padding: 20px 0;
     }
     .logo {
         width: 190px;
     }
+
     .nav-list li {
         opacity: 0;
     }
+
     .burguer{
         display: block;
         padding-left: 340px;
     }
+
     .burguer div {
         width: 50px;
         height: 6px;
         margin: 9px;
     }
+
     .carousel-item img {
         width: 100%;
         height: 100%;   
     }
+
     .support-content {
         margin-left: 20%;
         align-items: center;
