@@ -317,6 +317,52 @@ section .container > *{
     background: #ffffff;
 }
 
+.support {
+    width: 100%;
+    height: 80vh;
+    background-image: url(/img/caracteristicas-da-arara-de-caninde.jpg);background-position: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+}
+.support-content {
+    background: rgba(252, 250, 250, 0);
+    backdrop-filter: blur(1rem);
+    width: 40%;
+    height: 100%;
+    padding: 80px;
+    color: #ffffff;
+    margin-left: 0px;
+}
+
+.support-content h1 {
+    margin: 5px;
+    color: #fcfcfc;
+    font-weight: bold;
+    padding-bottom: 10px;
+}
+
+.support-content p{
+    margin-bottom: 20px;
+}
+
+.support-content .ctn {
+    text-decoration: none;
+    padding: 8px 30px;
+    border-radius: 30px;
+    background: #175737;
+    color: #ffffff;
+    font-weight: bold;
+    margin-left: 280px;
+}
+
+.ctn:hover {
+    background: #fff;
+    color: #175737;
+}
+
 /* footer */
 
 .footer {
@@ -356,6 +402,7 @@ a img {
     color: inherit;
     text-decoration: none;
     opacity: 0.8;
+    font-weight: bold;
 }
 
 .footer ul li {
@@ -425,6 +472,10 @@ a img {
     .carousel-item img {
         width: 100%;
         height: 100%;   
+    }
+    .support-content {
+        margin-left: 20%;
+        align-items: center;
     }
 }
 

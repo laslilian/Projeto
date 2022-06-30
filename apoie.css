@@ -195,6 +195,7 @@ footer ul li a {
     color: inherit;
     text-decoration: none;
     opacity: 0.8;
+    font-weight: bold;
 }
 
 footer ul li {
