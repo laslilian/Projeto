@@ -1,421 +1,406 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+/* @import url("./mediaquery.css"); */
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'Poppins', sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
 }
 
-/* barra de rolagem */
+/* Nav-bar */
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #145035;
+}
+.nav-links {
+  display: flex;
+  /* display: none; */
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: bold;
+  gap: .5rem;
+}
+.nav-links > li {
+  display: flex;
+  align-items: center;
+}
+.nav-links > li > a {
+  text-decoration: none;
+  padding: 6px 15px;
+  color: #fff;
+  transition: 0.3s;
+  border-radius: 3rem;
+}
+.nav-links > li > a:hover,
+.nav-links > li > a.active {
+  background: #ffffff;
+  color: #145035;
+}
+#logo {
+  width: 20%;
+  min-width: 3rem;
+  max-width: 5rem;
+}
+.container {
+  padding: 0 3rem;
+  margin: 0 auto;
+}
+/* Nav-bar end */
 
+/* Scrollbar */
 ::-webkit-scrollbar {
-    width: 5px;
+  width: 5px;
 }
-
 ::-webkit-scrollbar-track {
-    background: #175737;
+  background: #175737;
 }
-
 ::-webkit-scrollbar-thumb {
-    background: #ffffff;
-    border-radius: 1rem;
+  background: #175737;
+  border-radius: 1rem;
 }
+/* Scrollbar end */
 
-/* Título da página */
-
-.big-title{
-    position: absolute;
-    z-index: 17;
-    line-height: 4rem;
-    top: calc(37% - 2rem);
-    width: 100%;
-    text-align: center;
-    font-size: 5rem;
-    font-weight: 600;
-    left: 1rem;
-    color: transparent;
-    -webkit-text-stroke: 2px rgb(255, 255, 255);
+/* Main image */
+#sky-mountain-container {
+  width: 100%;
+  height: 100%;
+  background-image: url("./img/sky.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-/* Imagem principal da página */
-
-.container{
-    padding: 0 2rem;
-    margin: 0 auto;
+#montain-image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  background-image: url("./img/mountain.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
+/* Main image end */
 
-header{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    overflow: hidden;
+/* Page title */
+.big-title {
+  margin-bottom: 6rem;
+  text-align: center;
+  font-size: clamp(3rem, 15vw, 6rem);
+  font-weight: 600;
+  color: transparent;
+  -webkit-text-stroke: 2px rgb(255, 255, 255);
 }
+/* Page title end */
 
-header:after{
-    content: '';
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    left: 0;
-    top: 0;
-    background-color: rgba(0, 0, 0, 0);
-    z-index: 25;
-}
-
-.sky {  
-    position: absolute;
-    bottom: -80px;
-    right: 0;
-    z-index: 16;
-    height: 100vh;
-    
-}
-
-.mountain3 { 
-    position: absolute;
-    bottom: -120px;
-    right: 0;
-    z-index: 17;
-    height: 100vh;
-    
-}
-
-/* barra de navegação */
-
-nav {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    padding: 5px 0;
-    z-index: 30;
-    background: #145035;
-}
-
-nav .container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.logo {
-    width: 70px;
-    border-radius: 50px;
-}
-
-header ul {
-    display: flex;
-    text-transform: uppercase;
-    font-weight: bold;
-}
-
-header ul li {
-    list-style: none;
-    margin-left: 1rem;
-}
-
-header ul li a {
-    text-decoration: none;
-    padding: 6px 15px;
-    color: #fff;
-    transition: 0.3s;
-}
-
-header ul li a:hover,
-header ul li a.active {
-    background: #ffffff;
-    border-radius: 3rem;
-    color: #145035;
+header {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .burguer {
-    display: none;
-    cursor: pointer;
+  display: none;
+  cursor: pointer;
+}
+.burguer div {
+  width: 25px;
+  height: 2px;
+  background-color: #ffffff;
+  margin: 6px;
+  transition: all 0.3s ease;
 }
 
-.burguer div{
-    width: 25px;
-    height: 2px;
-    background-color: #ffffff;
-    margin: 6px;
-    transition: all 0.3s ease;
+/* Content */
+section {
+  width: 100%;
+  background-color: #175737;
+  position: relative;
 }
-
-/* conteúdo da página */
-
-section{
-    width: 100%;
-    background-color: #175737;
-    position: relative;
+section .container {
+  padding: 3rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
 }
-
-section .container{
-    padding: 3rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+section .container > * {
+  margin: 2rem;
 }
-
-section .container > *{
-    margin: 2rem;
+.content {
+  color: #fff;
+  font-size: 1rem;
+  text-align: justify;
 }
-
-.content{
-    color: #fff;
-    transform: translateY(10px);
+.title {
+  font-weight: 600;
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  position: relative;
 }
-
-.title{
-    font-weight: 600;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    position: relative;
+.border {
+  position: absolute;
+  width: 70%;
+  height: 3px;
+  background-color: #ffffff;
+  bottom: 0;
+  left: 0;
 }
-
-.border{
-    position: absolute;
-    width: 70%;
-    height: 3px;
-    background-color: #ffffff;
-    bottom: 0;
-    left: 0;
+.shadow {
+  position: absolute;
+  bottom: 100%;
+  height: 300px;
+  width: 100%;
+  left: 0;
+  z-index: 20;
+  background: linear-gradient(to top, #175737, transparent);
 }
-
-.shadow{
-    position: absolute;
-    bottom: 100%;
-    height: 300px;
-    width: 100%;
-    left: 0;
-    z-index: 20;
-    background: linear-gradient(to top, #175737, transparent);
+.opacity {
+  opacity: 0;
 }
+/* Content end */
 
-.opacity{
-    opacity: 0;
-}
-
-/* carousel*/
-
+/* Carousel */
 .slider {
-    width: 500px;
-    height: 300px;
-    border-radius: 10px;
-    overflow: hidden;
+  width: 500px;
+  height: 300px;
+  border-radius: 10px;
+  overflow: hidden;
 }
-
 .slides {
-    width: 500%;
-    height: 500px;
-    display: flex;
+  width: 500%;
+  height: 500px;
+  display: flex;
 }
-
 .slides input {
-    display: none;
+  display: none;
 }
-
-.slide{
-    width: 20%;
-    transition: 2s;
+.slide {
+  width: 20%;
+  transition: 2s;
 }
-
 .slide img {
-    width: 500px;
-    height: 300px;
+  width: 500px;
+  height: 300px;
 }
+/* Carousel end */
 
-/* css dor manual slide navigation */
-
-.navigation-manual {
-    position: absolute;
-    width: 800px;
-    height: 10px;
-    margin: -230px -150px;
-    display: flex;
-    justify-content: center;
-}
-
-.manual-btn {
-    width: 40px;
-    border: 1px solid #ffffff;
-    padding: 5px;
-    cursor: pointer;
-    transition: 1s;
-    border-radius: 5px;
-}
-
-.manual-btn:not(:last-child) {
-    margin-right: 20px;
-}
-
-.manual-btn:hover{
-    background: #ffffff;
-}
-
-#radio1:checked ~ .first{
-    margin-left: 0;
-}
-
-#radio2:checked ~ .first{
-    margin-left: -20%;
-}
-
-#radio3:checked ~ .first{
-    margin-left: -40%;
-}
-
-#radio4:checked ~ .first{
-    margin-left: -60%;
-}
-
-/* css automatic navigation */
-
+/* Css dor manual slide navigation */
 .navigation-auto {
-    position: absolute;
-    width: 800px;
-    height: 10px;
-    margin: 270px -150px;
-    display: flex;
-    justify-content: center;
+  position: absolute;
+  width: 90px;
+  height: 10px;
+  margin: -230px -150px;
+  display: flex;
+  justify-content: center;
 }
+.manual-btn1 {
+  width: 40px;
+  border: 1px solid #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 5px;
+}
+.manual-btn2 {
+  width: 40px;
+  border: 1px solid #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 5px;
+}
+.manual-btn3 {
+  width: 40px;
+  border: 1px solid #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 5px;
+}
+.manual-btn4 {
+  width: 40px;
+  border: 1px solid #ffffff;
+  padding: 5px;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 5px;
+}
+.manual-btn1:not(:last-child) {
+  margin-right: 20px;
+}
+.manual-btn1:hover {
+  background: #ffffff;
+}
+.manual-btn2:not(:last-child) {
+  margin-right: 20px;
+}
+.manual-btn2:hover {
+  background: #ffffff;
+}
+.manual-btn3:not(:last-child) {
+  margin-right: 20px;
+}
+.manual-btn3:hover {
+  background: #ffffff;
+}
+.manual-btn4:not(:last-child) {
+  margin-right: 20px;
+}
+.manual-btn4:hover {
+  background: #ffffff;
+}
+#radio1:checked ~ .first {
+  margin-left: 0;
+}
+#radio2:checked ~ .first {
+  margin-left: -20%;
+}
+#radio3:checked ~ .first {
+  margin-left: -40%;
+}
+#radio4:checked ~ .first {
+  margin-left: -60%;
+}
+#radio1:checked ~ .navigation-auto .manual-btn1 {
+  background: #ffffff;
+}
+#radio2:checked ~ .navigation-auto .manual-btn2 {
+  background: #ffffff;
+}
+#radio3:checked ~ .navigation-auto .manual-btn3 {
+  background: #ffffff;
+}
+#radio4:checked ~ .navigation-auto .manual-btn4 {
+  background: #ffffff;
+}
+/* Css dor manual slide navigation end */
 
+/* Css automatic navigation */
+.navigation-auto {
+  position: absolute;
+  width: 800px;
+  height: 10px;
+  margin: 270px -150px;
+  display: flex;
+  justify-content: center;
+}
 .navigation-auto div {
-    width: 40px;
-    border: 1px solid #ffffff;
-    padding: 5px;
-    cursor: pointer;
-    transition: 1s;
-    border-radius: 5px;
+  width: 3.5rem;
+  border: 1px solid #ffffff;
+  padding: 0.3rem;
+  cursor: pointer;
+  transition: 1s;
+  border-radius: 5px;
 }
-
 .navigation-auto div:not(:last-child) {
-    margin-right: 20px;
+  margin-right: 1.5rem;
 }
+/* CSS automatic navigation end */
 
-#radio1:checked ~ .navigation-auto .auto-btn1 {
-    background: #ffffff;
-}
-
-#radio2:checked ~ .navigation-auto .auto-btn2 {
-    background: #ffffff;
-}
-
-#radio3:checked ~ .navigation-auto .auto-btn3 {
-    background: #ffffff;
-}
-
-#radio4:checked ~ .navigation-auto .auto-btn4 {
-    background: #ffffff;
-}
-
-.support {
-    width: 100%;
-    height: 80vh;
-    background-image: url(/img/caracteristicas-da-arara-de-caninde.jpg);background-position: center;
-    background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
+/*  Support Home */
+.support1 {
+  width: 100%;
+  height: 80vh;
+  background-image: url(/img/caracteristicas-da-arara-de-caninde.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
 }
 .support-content {
-    background: rgba(252, 250, 250, 0);
-    backdrop-filter: blur(1rem);
-    width: 40%;
-    height: 100%;
-    padding: 80px;
-    color: #ffffff;
-    margin-left: 0px;
+  background: rgba(252, 250, 250, 0);
+  backdrop-filter: blur(0.5rem);
+  width: 50%;
+  height: 50%;
+  padding-right: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  color: #ffffff;
+  margin-left: 0;
 }
-
-.support-content h1 {
-    margin: 5px;
-    color: #fcfcfc;
-    font-weight: bold;
-    padding-bottom: 10px;
+.support1 h1 {
+  text-align: center;
+  color: #fcfcfc;
+  font-weight: bold;
+  padding-bottom: 1.5rem;
+  font-size: 3rem;
 }
-
-.support-content p{
-    margin-bottom: 20px;
+.support-content > p {
+  padding-left: 5rem;
+  text-align: justify;
+  padding-bottom: 1rem;
+  font-size: 1rem;
+  font-weight: bold; 
 }
-
 .support-content .ctn {
-    text-decoration: none;
-    padding: 8px 30px;
-    border-radius: 30px;
-    background: #175737;
-    color: #ffffff;
-    font-weight: bold;
+  text-decoration: none;
+  border-radius: 2rem;
+  background: #175737;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1rem;
+  padding: 0.5rem 2rem;
+  margin-left: 5rem;
 }
-
 .ctn:hover {
-    background: #fff;
-    color: #175737;
+  background: #fff;
+  color: #175737;
 }
+/*  Support Home end */
 
-/* footer */
-
-.footer {
-    padding: 40px 0;
-    background: #ffffff;
+/* Footer */
+footer {
+  padding: 2rem 0;
+  background: #ffffff;
 }
-
-.footer .social {
-    text-align: center;
-    padding-bottom: 25px;
+footer .social {
+  text-align: center;
+  padding-bottom: 2rem;
 }
-
-.footer .social a {
-    margin: 20px;
-    opacity: 0.75;
+footer .social a {
+  margin: 1rem;
+  opacity: 0.75;
 }
-
-.footer .social a:hover {
-    opacity: 0.9;
+footer .social a:hover {
+  opacity: 0.9;
 }
-
 a img {
-    width: 40px;
+  width: 3rem;
 }
-
-.footer ul {
-    margin-top: 0;
-    padding: 0;
-    list-style: none;
-    font-size: 18px;
-    line-height: 1.6;
-    margin-bottom: 0;
-    text-align: center;
+footer ul {
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 0;
+  text-align: center;
 }
-
-.footer ul li a {
-    color: inherit;
-    text-decoration: none;
-    opacity: 0.8;
-    font-weight: bold;
+footer ul li a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.8;
+  font-weight: bold;
 }
-
-.footer ul li {
-    display: inline-block;
-    padding: 0 15px;
+footer ul li {
+  display: inline-block;
+  padding: 0 1rem;
 }
-
-.footer ul li a:hover {
-    opacity: 1;
-    color: #145035;
+footer ul li a:hover {
+  opacity: 1;
+  color: #145035;
 }
-
-.footer .copyright {
-    margin-top: 15px;
-    text-align: center;
-    font-size: 13px;
-    color: #aaa;
+footer .copyright {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 1rem;
+  color: #aaa;
 }
-
+/* Footer end */
